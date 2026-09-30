@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube-History-Manager",
+    "version": "1.0.0",
+    "description": "Helps users manage older YouTube watch and search activity by date range",
+    "permissions": [
+        "alarms",
+        "scripting", 
+        "storage"
+    ],
+    "host_permissions": [
+        "https://myactivity.google.com/*",
+        "https://www.youtube.com/*"
+    ],
+    "background": {
+        "service_worker": "src/background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_title": "YouTube-History-Manager",
+        "default_popup": "popup.html"
+    }
+}

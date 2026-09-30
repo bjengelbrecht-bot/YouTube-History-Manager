@@ -1,0 +1,27 @@
+# Node.js dependencies
+mode_modules/
+
+
+# Environment files
+.env
+.env.*
+
+# Log files
+*.log 
+
+# Operating system files
+.DS_Store
+Thumbs.db 
+
+# VS Code local settings
+.vscode/
+
+
+# Test coverage
+coverage/
+
+
+
+# Temporary files
+*.tmp 
+*.temp 

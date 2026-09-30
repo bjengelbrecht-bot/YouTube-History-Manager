@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>YouTube-History-Manager</title>
+</head>
+<body>
+    <main class="container">
+
+        <h1>YouTube-History-Manager</h1>
+
+        <section>
+            <h2>Delete Old History</h2>
+
+            <label for="months">   <!-- choose the number of months past -->
+                Delete history older than:
+            </label>
+
+            <!-- Allows the user to enter the number of months -->
+            <input
+                id="months"
+                type="number"
+                min="1"
+                max="120"
+                value="6"
+            >
+
+            <button id="calculateButton">  <!-- creates a button that JavaScript can detect -->
+                Calculate Date
+            </button>
+
+            <p id="calculateDate"></p>
+
+            <button id="openActivityButton">
+                Open YouTube History
+            </button>
+        </section>
+
+
+        <section>
+            <h2>Custom Date Range</h2>
+
+            <label for="startDate">
+                Start date:
+            </label>
+
+            <input
+                id="startDate"
+                type="date"
+            >
+
+            <label for="endDate">
+                End date:
+            </label>
+
+            <input
+                id="endDate"
+                type="date"
+            >
+
+            <button id="rangeButton">
+                Open Date Range
+            </button>
+        </section>
+
+        <!-- Setup for search history -->
+         <section>
+            <h2>YouTube Search History</h2>
+
+            <button id="searchHistoryButton">
+                Manage Search History
+            </button>
+         </section>
+
+         <p id="status">
+            Ready
+         </p>
+
+    </main>
+
+    <script type="module" src="popup.js"></script>
+
+</body>
+</html>
