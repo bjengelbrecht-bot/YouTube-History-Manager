@@ -8,6 +8,14 @@
         "scripting", 
         "storage"
     ],
+
+    "icons": {
+        "16": "icons/search.png",
+        "32": "icons/calender.png",
+        "48": "icons/history.png",
+        "128": "icons/Extension.png"
+    },
+
     "host_permissions": [
         "https://myactivity.google.com/*",
         "https://www.youtube.com/*"
@@ -16,8 +24,14 @@
         "service_worker": "src/background.js",
         "type": "module"
     },
+
+
     "action": {
         "default_title": "YouTube-History-Manager",
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/search.png",
+            "32": "icons/calender.png"
+        }
     }
 }

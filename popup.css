@@ -6,6 +6,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     width: 380px;
+    padding: 16px;
+    background: #f5f7fb;
 }
 
 /**
@@ -13,7 +15,21 @@ body {
 */
 .container {
     padding: 20px;
+    text-align: center;
 }
+
+
+/** 
+* Logo settings font
+*/
+.logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+
 
 /**
 * Main heading.
@@ -55,8 +71,25 @@ section {
     width: 100%;
     margin-top: 10px;
     padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
     cursor: pointer;
  }
+
+ button:hover {
+    background: #1d4ed8;
+ }
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 
  /**
  * Status message.
