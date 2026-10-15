@@ -64,6 +64,52 @@ section {
     padding: 8px;
  }
 
+
+/* Style the History type label */
+label[for="historyType"] {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Style the dropdown menu */
+#historyType {
+    width: 220px;
+    padding: 10px;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Style the dropdown when focused */
+#historyType:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Style the dropdown options */
+#historyType option {
+    padding: 8px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Style the selected date range paragraph */
+#selectedDateRange {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
+
+
+
  /**
  * Buttons.
  */
@@ -98,3 +144,48 @@ section {
     margin-top: 20px;
     font-weight: bold;
  }
+
+
+ 
+/* Make common popup controls follow the theme */
+button,
+input,
+select {
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #777777;
+}
+
+/* Inverted theme */
+body.inverted-colors {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+body.inverted-colors button,
+body.inverted-colors input,
+body.inverted-colors select {
+    background-color: #303030;
+    color: #ffffff;
+    border-color: #aaaaaa;
+}
+
+body.inverted-colors button:hover {
+    background-color: #454545;
+}
+
+/* Theme button */
+.theme-controls {
+    margin: 12px 0;
+}
+
+#invertColorsButton {
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#invertColorsButton:focus-visible {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+}

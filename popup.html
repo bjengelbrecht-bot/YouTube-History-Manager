@@ -12,7 +12,7 @@
         <div>
             <!-- Display the extension logo -->
             <img
-                src="icons/icon128.png"
+                src="icons/extension.png"
                 alt="YouTube-History-Manager logo"
                 class="logo"
             >
@@ -21,19 +21,25 @@
 
             <p>Manage your watch and search history by date range.</p>
 
+        </div>
+
+        <!-- Watch History Management -->
+        <section>
             <button id="watchHistory">
                 <img src="icons/history.png" alt="" class="button-icon">
                 Manage Watch History
             </button>
 
-            <button id="searchHistory">
-                <img src="icons/search.png" alt="" class="button-icon">
-                Manage Search History
+        </section>
+
+        <!-- The Color Swap Button -->
+        <section class="theme-controls">
+            <button id="invertColorsButton" type="button" aria-pressed="false">
+                <span aria-hidden="true">◐</span>
+                Invert Colours
             </button>
-        </div>
-
+        </section>
  
-
         <section>
             <h2>Delete Old History</h2>
 
@@ -83,6 +89,14 @@
                 type="date"
             >
 
+            <label for="historyType">History type:</label>
+            <select id="historyType">
+                <option value="watch">Watch History</option>
+                <option value="search">Search History</option>
+            </select>
+
+            <p id="selectedDateRange" role="status"></p>
+
             <button id="rangeButton">
                 Open Date Range
             </button>
@@ -93,6 +107,7 @@
             <h2>YouTube Search History</h2>
 
             <button id="searchHistoryButton">
+                <img src="icons/search.png" alt="" class="button-icon">
                 Manage Search History
             </button>
          </section>
