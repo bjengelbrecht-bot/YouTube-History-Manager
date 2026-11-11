@@ -152,37 +152,40 @@ rangeButton.addEventListener("click", () => {
         return;
     }
 
-    // Prepare a readable history type.
-    const historyLabel =
-        historyType === "watch"
-            ? "Watch History"
-            : "Search History";
-
-    // Display the selected dates and history type.
-    selectedDateRange.textContent =
-        `${historyLabel}: ${startDate} to ${endDate}`;
-
-    // Send the selection to the background service worker.
-    chrome.runtime.sendMessage({
-        action: "openActivity",
+    // Create URL parameters to transfer the selections.
+    const parameters = new URLSearchParams({
         historyType: historyType,
         startDate: startDate,
         endDate: endDate
-    }, (response) => {
-        if (chrome.runtime.lastError) {
-            statusMessage.textContent =
-                "Could not open the history page. Please reload the extension.";
-            return;
-        }
-
-        if (response && response.success) {
-            statusMessage.textContent =
-                `Opening ${historyLabel} for ${startDate} to ${endDate}.`;
-        } else {
-            statusMessage.textContent =
-                "The history page could not be opened.";
-        }
     });
+
+    // Build the address of the new management page.
+     const managementPageUrl =
+        chrome.runtime.getURL(
+            "management.html?" + parameters.toString()
+        );
+
+    // Open the management page in a new browser tab.
+    chrome.tabs.create(
+        { url: managementPageUrl },
+        () => {
+
+            // Check whether Chrome reported an error.
+            if (chrome.runtime.lastError) {
+                statusMessage.textContent =
+                    "Could not open the management page.";
+
+                console.error(
+                    chrome.runtime.lastError.message
+                );
+
+                return;
+            }
+
+            statusMessage.textContent =
+                "Your selected date range has been opened.";
+        }
+    );
 });
 
 

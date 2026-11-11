@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube History Manager</title>
+
+    <link rel="stylesheet" href="management.css">
+</head>
+<body>
+    <main class="container">
+
+        <header>
+            <h1>YouTube History Manager</h1>
+            <p>
+                Review your selected YouTube activity date range.
+            </p>
+        </header>
+
+        <section class="range-card">
+            <h2>Selected Custom Date Range</h2>
+
+            <p>
+                <strong>History type:</strong>
+                <span id="historyType">Not selected</span>
+            </p>
+
+            <p>
+                <strong>Start date:</strong>
+                <span id="startDate">Not selected</span>
+            </p>
+
+            <p>
+                <strong>End date:</strong>
+                <span id="endDate">Not selected</span>
+            </p>
+        </section>
+
+        <section class="instructions">
+            <h2>How to manage your history</h2>
+
+            <ol>
+                <li>
+                    Check that the selected history type and dates
+                    are correct.
+                </li>
+                <li>
+                    Open the official YouTube or Google activity page.
+                </li>
+                <li>
+                    Find the activity you want to review.
+                </li>
+                <li>
+                    Use the controls provided by Google to manage
+                    or delete the relevant activity.
+                </li>
+            </ol>
+
+            <p class="notice">
+                Your selected dates are displayed here as a guide.
+                Google does not automatically apply this custom date
+                range when the activity page opens.
+            </p>
+        </section>
+
+        <section class="actions">
+            <button id="openOfficialPage" type="button">
+                Open Official Activity Page
+            </button>
+
+            <p id="statusMessage" role="status">
+                Ready to review your history.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="management.js"></script>
+</body>
+</html>

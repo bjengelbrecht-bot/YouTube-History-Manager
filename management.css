@@ -1,0 +1,76 @@
+
+/* Set the overall appearance of the management page. */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222222;
+}
+
+/* Centre the main content and limit its width. */
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+/* Style the main heading. */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #cc0000;
+}
+
+/* Style the date range and instruction sections. */
+.range-card,
+.instructions {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+}
+
+/* Make the selected date information easier to read. */
+.range-card p {
+    line-height: 1.7;
+}
+
+/* Improve spacing between instruction steps. */
+.instructions li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+/* Highlight the important limitation. */
+.notice {
+    background-color: #fff3cd;
+    border-left: 4px solid #e0a800;
+    padding: 12px;
+    line-height: 1.5;
+}
+
+/* Style the activity page button. */
+button {
+    background-color: #cc0000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Change the button appearance when hovered over. */
+button:hover {
+    background-color: #990000;
+}
+
+/* Display status messages clearly. */
+#statusMessage {
+    margin-top: 15px;
+    color: #333333;
+}
